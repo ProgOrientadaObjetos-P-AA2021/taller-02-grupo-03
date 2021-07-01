@@ -17,6 +17,9 @@ public class Ejecutor {
         String nombreArchivo = "pasajes.data";
         ArrayList<PasajeInterCantonal> pasajes = new ArrayList<>();
         
+        PasajeMenorEdad pi = new PasajeMenorEdad("Xavier", "1150582755", "Loja", "Cuenca", 213.3, 12.2, 5);
+        
+        
         
         EscrituraArchivoSecuencial archivo = new EscrituraArchivoSecuencial(nombreArchivo);
 

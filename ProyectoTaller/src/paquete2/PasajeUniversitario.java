@@ -11,9 +11,28 @@ import java.io.Serializable;
  *
  * @author reroes
  */
-public class PasajeUniversitario extends PasajeInterCantonal {
-    
-    
-    
-    
+public class PasajeUniversitario extends PasajeInterCantonal implements Serializable{
+
+    private String nombreUni;
+
+    public PasajeUniversitario(String n, String c, String o, String d, 
+            double dis, double tar, String nom) {
+        super(n, c, o, d, dis, tar);
+        nombreUni = nom;
+    }
+
+    public void establecerNombreUni(String n) {
+        nombreUni = n;
+    }
+
+    @Override
+    public void establecerValPasaje() {
+        valPasaje = tarifaBase / 2;
+
+    }
+
+    public String obtenerNombreUni() {
+        return nombreUni;
+    }
+
 }

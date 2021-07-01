@@ -17,8 +17,8 @@ public class PasajeNormal extends PasajeInterCantonal
     private double porcentajeAdicional;
 
     public PasajeNormal(String n, String c, String o, String d, 
-            double dis, double tar, double val, double porc) {
-        super(n, c, o, d, dis, tar, val);
+            double dis, double tar, double porc) {
+        super(n, c, o, d, dis, tar);
         porcentajeAdicional = porc;
     }
 

@@ -11,7 +11,8 @@ import java.io.Serializable;
  *
  * @author reroes
  */
-public abstract class PasajeInterCantonal implements Serializable{
+public abstract class PasajeInterCantonal implements Serializable {
+
     protected String nombre;
     protected String cedula;
     protected String origen;
@@ -19,74 +20,70 @@ public abstract class PasajeInterCantonal implements Serializable{
     protected double distanciaKm;
     protected double tarifaBase;
     protected double valPasaje;
-    
-    public PasajeInterCantonal(String n, String c, String o, String d, 
-            double dis, double tar, double val){
+
+    public PasajeInterCantonal(String n, String c, String o, String d,
+            double dis, double tar) {
         nombre = n;
         cedula = c;
         origen = o;
         destino = d;
         distanciaKm = dis;
-        tarifaBase = tar;
-        valPasaje = val;
+        tarifaBase = tar;   
     }
-    
-    public void establecerNombre(String n){
+
+    public void establecerNombre(String n) {
         nombre = n;
     }
-    
-    public void establecerCedula(String n){
+
+    public void establecerCedula(String n) {
         cedula = n;
     }
-    
-    public void establecerOrigen(String n){
+
+    public void establecerOrigen(String n) {
         origen = n;
     }
-    
-    public void establecerDestino(String n){
+
+    public void establecerDestino(String n) {
         destino = n;
     }
-    
-    public void establecerDistanciKm(double n){
+
+    public void establecerDistanciKm(double n) {
         distanciaKm = n;
     }
-    
-    public void establecerTarifaBase(double n){
+
+    public void establecerTarifaBase(double n) {
         tarifaBase = n;
     }
-    
+
     public abstract void establecerValPasaje();
-    
-    public String obtenerNombre(){
+
+    public String obtenerNombre() {
         return nombre;
     }
-    
-    public String obtenerCedula(){
+
+    public String obtenerCedula() {
         return cedula;
     }
-    
-    public String obtenerOrigen(){
+
+    public String obtenerOrigen() {
         return origen;
     }
-    
-    public double obtenerDistanciaKm(){
+
+    public double obtenerDistanciaKm() {
         return distanciaKm;
     }
-    
-    public double obtenerTarifaBase(){
+
+    public double obtenerTarifaBase() {
         return tarifaBase;
     }
-    
-    public double obtenerValPasaje(){
+
+    public double obtenerValPasaje() {
         return valPasaje;
     }
-    
-    
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("Pasaje.");
     }
-    
-    
+
 }
