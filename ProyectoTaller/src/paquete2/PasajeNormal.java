@@ -11,8 +11,34 @@ import java.io.Serializable;
  *
  * @author reroes
  */
-public class PasajeNormal extends PasajeInterCantonal 
-        implements Serializable{
+public class PasajeNormal extends PasajeInterCantonal
+        implements Serializable {
+
+    private double porcentajeAdicional;
+
+    public PasajeNormal(String n, String c, String o, String d, 
+            double dis, double tar, double val, double porc) {
+        super(n, c, o, d, dis, tar, val);
+        porcentajeAdicional = porc;
+    }
+
+    public void establecerPorcentajeAdicional(double n) {
+        porcentajeAdicional = n;
+    }
+
+    @Override
+    public void establecerValPasaje() {
+        valPasaje = ((distanciaKm * 0.15) + (tarifaBase
+                + (tarifaBase * (porcentajeAdicional / 100))));
+    }
     
-    
+    public double obtenerPorcentajeAdiconal() {
+        return porcentajeAdicional;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("\n%.2f\n", obtenerValPasaje());
+    }
+
 }
