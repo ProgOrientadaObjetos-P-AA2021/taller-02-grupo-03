@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class PasajeTerceraEdad extends PasajeInterCantonal implements Serializable{
 
     public PasajeTerceraEdad(String n, String c, String o, String d, 
-            double dis, double tar, double porc) {
+            double dis, double tar) {
         super(n, c, o, d, dis, tar);
     }
 
