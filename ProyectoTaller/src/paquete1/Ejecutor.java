@@ -17,7 +17,15 @@ public class Ejecutor {
         String nombreArchivo = "pasajes.data";
         ArrayList<PasajeInterCantonal> pasajes = new ArrayList<>();
         
-        PasajeMenorEdad pi = new PasajeMenorEdad("Xavier", "1150582755", "Loja", "Cuenca", 213.3, 12.2, 5);
+        PasajeMenorEdad pasInt = new PasajeMenorEdad("Xavier", "1150582755", 
+                "Loja", "Cuenca", 213.3, 12.2, 5);
+        PasajeNormal pasNor = new PasajeNormal("George", "123284733", "Quito", 
+                "Loja", 313.4, 21.45,10);
+        
+        
+        pasajes.add(pasInt);
+        pasajes.add(pasNor);
+        
         
         
         
