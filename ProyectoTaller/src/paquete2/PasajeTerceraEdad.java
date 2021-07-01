@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class PasajeTerceraEdad extends PasajeInterCantonal implements Serializable{
 
     public PasajeTerceraEdad(String n, String c, String o, String d, 
-            double dis, double tar, double porc) {
+            double dis, double tar) {
         super(n, c, o, d, dis, tar);
     }
 
@@ -25,6 +25,9 @@ public class PasajeTerceraEdad extends PasajeInterCantonal implements Serializab
     
     @Override
     public String toString() {
-        return String.format("\n%.2f\n", obtenerValPasaje());
+        String cadena =  String.format("%s\n%.2f\n", super.toString(), 
+                obtenerValPasaje());
+        return cadena;
+        
     }
 }

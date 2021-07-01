@@ -34,5 +34,13 @@ public class PasajeMenorEdad extends PasajeInterCantonal
     public double obtenerPorcentaje() {
         return porcentaje;
     }
+    
+    @Override
+    public String toString() {
+        String cadena =  String.format("%s\n%.2f\n", super.toString(), 
+                obtenerValPasaje());
+        return cadena;
+        
+    }
 
 }
