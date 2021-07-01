@@ -38,7 +38,8 @@ public class PasajeUniversitario extends PasajeInterCantonal implements Serializ
     @Override
     public String toString(){
         String cadena = String.format("%s\nNombre de la Universidad: %s\n"
-                + "Valor del pasaje: %.2f",super.toString(), nombreUni,valPasaje);
+                + "Valor del pasaje: %.2f\n",super.toString(), 
+                nombreUni,valPasaje);
         
         return cadena;
     }

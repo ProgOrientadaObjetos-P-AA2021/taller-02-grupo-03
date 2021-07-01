@@ -25,7 +25,8 @@ public class PasajeTerceraEdad extends PasajeInterCantonal implements Serializab
     
     @Override
     public String toString() {
-        String cadena =  String.format("%s\n%.2f\n", super.toString(), 
+        String cadena =  String.format("%s\nValor del pasaje: %.2f\n", 
+                super.toString(), 
                 obtenerValPasaje());
         return cadena;
         

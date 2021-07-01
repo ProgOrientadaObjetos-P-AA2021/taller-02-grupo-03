@@ -39,7 +39,7 @@ public class PasajeNormal extends PasajeInterCantonal
     @Override
     public String toString() {
         String cadena = String.format("%s\nPorcentaje Adicional: %s\n"
-                + "Valor del pasaje: %s",super.toString(), 
+                + "Valor del pasaje: %.2f\n",super.toString(), 
                 porcentajeAdicional, valPasaje);
         return cadena;
     }
