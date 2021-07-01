@@ -14,6 +14,21 @@ import java.io.Serializable;
 public class PasajeMenorEdad extends PasajeInterCantonal 
         implements Serializable{
     
+    private double porcentaje;
+    public PasajeMenorEdad(String n, String c, String o, String d, 
+            double dis, double tar, double val, double porc) {
+        super(n, c, o, d, dis, tar, val);
+        porcentaje = porc;
+    }
+    
+    public void establecerPorcentaje(double n){
+        porcentaje = n;
+    }
+    
+    @Override
+    public void establecerValPasaje(){
+        valPasaje = (distanciaKm * 0.15) + (tarifaBase*(porcentaje/100));
+    }
     
     
 }
